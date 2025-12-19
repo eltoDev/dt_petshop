@@ -1,6 +1,6 @@
 # Petshop 🐾
 
-Projeto de cadastro de animais desenvolvido com **React**, **Vite**, **TypeScript** e **Tailwind CSS**.
+Projeto de cadastro de animais desenvolvido com **React**, **Vite**, **TypeScript**, **Tailwind CSS** e **Hero Icons**.
 
 ## 🚀 Como rodar
 
