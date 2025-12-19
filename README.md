@@ -4,7 +4,8 @@ Projeto de cadastro de animais desenvolvido com **React**, **Vite**, **TypeScrip
 
 ## Requisitos
 
-É necessário ter o [Node.js](https://nodejs.org/) instalado.
+É necessário ter o [Node.js](https://nodejs.org/) (Versão 18 ou superior)
+Também é necessário [Git](https://git-scm.com/) para clonar o repositório
 
 ## 🚀 Use os comandos a seguir no terminal da sua IDE para rodar o projeto localmente: 
 
