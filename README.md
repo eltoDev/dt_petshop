@@ -9,7 +9,11 @@ Projeto de cadastro de animais desenvolvido com **React**, **Vite**, **TypeScrip
 ## 🚀 Use os comandos a seguir no terminal da sua IDE para rodar o projeto localmente: 
 
 git clone https://github.com/eltoDev/dt_petshop.git
+<br>
 cd dt_petshop
+<br>
 cd petshop
+<br>
 npm install
+<br>
 npm run dev
