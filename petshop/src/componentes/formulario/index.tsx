@@ -114,7 +114,7 @@ export const Formulario = ({ aoCadastrar }: FormularioProps) => {
 
           {/* Botão */}
           <div className="md:col-span-2">
-            <button type="submit" className="w-full h-12 bg-petshop-blue text-white font-semibold text-base rounded-lg hover:bg-opacity-90 transition-all shadow-md hover:shadow-lg flex items-center justify-center">
+            <button type="submit" className="w-full h-12 bg-petshop-blue text-white font-semibold text-base rounded-lg hover:bg-opacity-90 transition-all shadow-md hover:shadow-lg flex items-center justify-center group cursor-pointer">
               Adicionar
             </button>
           </div>
