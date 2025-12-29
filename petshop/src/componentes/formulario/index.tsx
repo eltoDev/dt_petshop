@@ -6,24 +6,25 @@ interface FormularioProps {
 }
 
 export const Formulario = ({ aoCadastrar }: FormularioProps) => {
-
+  // Estados locais para controlar os campos do formulário
   const [nome, setNome] = useState('');
   const [especie, setEspecie] = useState('Cachorro');
   const [emServico, setEmServico] = useState(false);
 
   const submeterFormulario = (evento: React.FormEvent) => {
-    evento.preventDefault();
+    evento.preventDefault(); // Evita o reload da página
     
+    // Validação simples para não enviar nome vazio
     if (!nome.trim()) return;
 
-    // Envia o objeto para o pai
+    // Envia o objeto montado para a função do componente pai
     aoCadastrar({
       nome,
       especie,
       emServico
     });
 
-    // Limpa o formulário
+    // Reseta o estado para os valores padrão após o envio
     setNome('');
     setEspecie('Cachorro');
     setEmServico(false);
@@ -39,9 +40,10 @@ export const Formulario = ({ aoCadastrar }: FormularioProps) => {
         onSubmit={submeterFormulario}
         className="bg-white p-10 rounded-xl shadow-sm border border-gray-100"
       >
+        {/* Grid responsivo para alinhar os inputs */}
         <div className="grid grid-cols-1 md:grid-cols-12 gap-8 items-end">
           
-          {/* Input: Nome */}
+          {/* Input: Nome do Animal */}
           <div className="md:col-span-4">
             <label className="block text-petshop-blue font-semibold mb-2 text-base">
               Nome do Animal
@@ -56,7 +58,7 @@ export const Formulario = ({ aoCadastrar }: FormularioProps) => {
             />
           </div>
 
-          {/* Select: Espécie */}
+          {/* Select: Espécie (com ícone de seta customizado) */}
           <div className="md:col-span-3">
             <label className="block text-petshop-blue font-semibold mb-2 text-base">
               Espécie
@@ -78,7 +80,7 @@ export const Formulario = ({ aoCadastrar }: FormularioProps) => {
             </div>
           </div>
 
-          {/* Radio: Em serviço? */}
+          {/* Radio Buttons: Status de serviço */}
           <div className="md:col-span-3 flex flex-col justify-end h-20 pb-2">
              <span className="block text-petshop-blue font-semibold mb-3 text-base">
                Em serviço?
@@ -106,13 +108,13 @@ export const Formulario = ({ aoCadastrar }: FormularioProps) => {
                     onChange={() => setEmServico(false)}
                     className="peer w-5 h-5 border-gray-300 text-petshop-blue focus:ring-petshop-blue" 
                    />
-                 </div>
-                 <span className="text-gray-700 text-base group-hover:text-petshop-blue transition-colors">Não</span>
+                  </div>
+                  <span className="text-gray-700 text-base group-hover:text-petshop-blue transition-colors">Não</span>
                </label>
              </div>
           </div>
 
-          {/* Botão */}
+          {/* Botão de Enviar */}
           <div className="md:col-span-2">
             <button type="submit" className="w-full h-12 bg-petshop-blue text-white font-semibold text-base rounded-lg hover:bg-opacity-90 transition-all shadow-md hover:shadow-lg flex items-center justify-center group cursor-pointer">
               Adicionar
